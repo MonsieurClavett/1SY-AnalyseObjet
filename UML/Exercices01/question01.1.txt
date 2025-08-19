@@ -1,0 +1,1 @@
+C'est le client car c'est lui qui se sert de la pompe, c'est lui qui intéragi avec la station-service de distribution d'essence.
