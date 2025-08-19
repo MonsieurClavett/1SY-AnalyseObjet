@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+
+actor Client
+actor Camionneur_pompiste
+
+Client <|-- Camionneur_pompiste
+
+rectangle "station-service de distribution d'essence" {
+    usecase "Utiliser la station d'essence" as UC1
+    usecase "Remplir les réservoirs des pompes" as UC2
+}
+
+Client --> UC1
+Camionneur_pompiste --> UC2
+
+@enduml
