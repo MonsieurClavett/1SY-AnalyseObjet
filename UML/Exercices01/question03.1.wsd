@@ -15,8 +15,5 @@ rectangle "Alkatrak" {
     usecase "Choisir un mode de paiement" as UC1_2 
 }
 
-
-
-
 @enduml
 

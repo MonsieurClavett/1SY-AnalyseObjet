@@ -2,6 +2,8 @@
 left to right direction
 
 actor Client
+actor Travailleur_Shamazon
+
 
 rectangle "Shamazon" {
     usecase "Passer une commande" as UC1
@@ -10,8 +12,9 @@ rectangle "Shamazon" {
     usecase "Expédier une commande" as UC3
 }
 
+Travailleur_Shamazon --> UC3
 Client --> UC1
-UC1 --> UC2 : <<include>>
+UC1 .-> UC2 : <<include>>
 UC1_2 .-> UC1 : <<extend>>
 UC1 --> UC3
 
