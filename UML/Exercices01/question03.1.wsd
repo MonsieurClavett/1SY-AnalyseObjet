@@ -1,19 +1,43 @@
 @startuml
 left to right direction
 
-actor Client
 actor Caissier
+actor Responsable
+rectangle Centre_autorisation_multi_banques
+rectangle System_gestion_stocks
+
 
 rectangle "Alkatrak" {
-    usecase "Deposer les articles" as UC1
-    usecase "Scanner les articles" as UC1_2
+    usecase "Scanner les articles" as UC1
     usecase "Signaler la fin de la vente" as UC2
-    usecase "Choisir un mode de paiement" as UC1_2
+    usecase "Choisir un mode de paiement" as UC3
+    usecase "Encaisser l'argent" as UC4
+    usecase "Enregistrer le montant du cheque dans la caisse" as UC5
+    usecase "Appliquer un coupon rabais" as UC6
+    usecase "Initialiser les caisses" as UC7
+    usecase "Enregistrer la vente" as UC8
 
-    usecase "Signaler la fin de la vente" as UC2
-    usecase "Afficher le total des achats" as UC3
-    usecase "Choisir un mode de paiement" as UC1_2 
+
+
+
 }
+
+Caissier --> UC1
+Caissier --> UC2
+UC3 .-> UC2 : <<include>>
+UC4 --|> UC3 
+UC5 --|> UC3
+Centre_autorisation_multi_banques .-> UC3 : <<extend>>
+UC6 .-> UC2 : <<extend>>
+UC8 .-> UC3 : <<include>>
+UC8 -- System_gestion_stocks
+
+
+
+
+Responsable --> UC7
+
+
 
 @enduml
 
