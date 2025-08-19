@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+actor Client
+
+rectangle "Shamazon" {
+    usecase "Passer une commande" as UC1
+    usecase "Passer une commande urgente" as UC1_2
+    usecase "Authentifier" as UC2
+    usecase "Expédier une commande" as UC3
+}
+
+Client --> UC1
+UC1 --> UC2 : <<include>>
+UC1_2 .-> UC1 : <<extend>>
+UC1 --> UC3
+
+
+@enduml
+

@@ -4,10 +4,9 @@ left to right direction
 actor Client
 actor Camionneur_pompiste
 
-Camionneur_pompiste --|> Client
 
 rectangle "station-service de distribution d'essence" {
-    usecase "Utiliser la station d'essence" as UC1
+    usecase "Servir de l'essence" as UC1
     usecase "Remplir les réservoirs des pompes" as UC2
 }
 

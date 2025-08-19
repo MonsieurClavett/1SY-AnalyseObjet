@@ -5,11 +5,10 @@ actor Client
 actor Camionneur_pompiste
 actor Réparateur
 
-Camionneur_pompiste --|> Client
 Réparateur --|> Camionneur_pompiste
 
 rectangle "station-service de distribution d'essence" {
-    usecase "Utiliser la station d'essence" as UC1
+    usecase "Servir de l'essence" as UC1
     usecase "Remplir les réservoirs des pompes" as UC2
     usecase "Faire une maintenance" as UC3
 }
