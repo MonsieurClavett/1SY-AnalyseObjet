@@ -16,7 +16,6 @@ Travailleur_Shamazon --> UC3
 Client --> UC1
 UC1 .-> UC2 : <<include>>
 UC1_2 .-> UC1 : <<extend>>
-UC1 --> UC3
 
 
 @enduml
